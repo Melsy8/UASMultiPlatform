@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart' hide SearchBar;
 import 'package:flutter_travel_concept/util/places.dart';
+import 'package:flutter_travel_concept/screens/notifcation_page.dart';
 import 'package:flutter_travel_concept/widgets/horizontal_place_item.dart';
 import 'package:flutter_travel_concept/widgets/icon_badge.dart';
 import 'package:flutter_travel_concept/widgets/search_bar.dart';
@@ -17,7 +18,11 @@ class Home extends StatelessWidget {
               size: 24, // Menambahkan ukuran icon badge
               color: Colors.black, // Menambahkan warna icon badge
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, 
+                MaterialPageRoute(builder: (context)=>NotificationPage())
+              );
+            },
           ),
         ],
       ),

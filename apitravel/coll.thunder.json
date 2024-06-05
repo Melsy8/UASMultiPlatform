@@ -1,0 +1,78 @@
+{
+    "collectionName": "API Travel",
+    "folders": [
+        {
+            "name": "Authentication",
+            "requests": [
+                {
+                    "name": "Register",
+                    "url": "http://localhost:8080/register",
+                    "method": "POST",
+                    "body": {
+                        "mode": "raw",
+                        "raw": "{\n  \"username\": \"melsy\",\n  \"email\": \"melsy@example.com\",\n  \"password\": \"1-6\",\n  \"name\": \"Melsy\"\n}"
+                    },
+                    "headers": {
+                        "Content-Type": "application/json"
+                    }
+                },
+                {
+                    "name": "Login",
+                    "url": "http://localhost:8080/login",
+                    "method": "POST",
+                    "body": {
+                        "mode": "raw",
+                        "raw": "{\n  \"username\": \"melsy\",\n  \"password\": \"1-6\"\n}"
+                    },
+                    "headers": {
+                        "Content-Type": "application/json"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "User Management",
+            "requests": [
+                {
+                    "name": "Update Profile",
+                    "url": "http://localhost:8080/update-profile",
+                    "method": "PUT",
+                    "body": {
+                        "mode": "raw",
+                        "raw": "{\n  \"username\": \"melsy\",\n  \"name\": \"Melsy Updated\"\n}"
+                    },
+                    "headers": {
+                        "Content-Type": "application/json"
+                    }
+                },
+                {
+                    "name": "Change Password",
+                    "url": "http://localhost:8080/change-password",
+                    "method": "PUT",
+                    "body": {
+                        "mode": "raw",
+                        "raw": "{\n  \"username\": \"melsy\",\n  \"old_password\": \"1-6\",\n  \"new_password\": \"newpass123\"\n}"
+                    },
+                    "headers": {
+                        "Content-Type": "application/json"
+                    }
+                },
+                {
+                    "name": "Get User By Username",
+                    "url": "http://localhost:8080/user/melsy",
+                    "method": "GET"
+                },
+                {
+                    "name": "Get All Users",
+                    "url": "http://localhost:8080/users",
+                    "method": "GET"
+                },
+                {
+                    "name": "Delete User By ID",
+                    "url": "http://localhost:8080/user/1",
+                    "method": "DELETE"
+                }
+            ]
+        }
+    ]
+}
